@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ASCII"?>
+<com.isb.msf.model:MsfThemeRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.isb.msf.model="http://theme.model.msf.isb.com" id="Default" scope="protected">
+  <entries path="slct/common/pgs/theme/Default.css"/>
+  <cssCode code=""/>
+</com.isb.msf.model:MsfThemeRoot>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MsfView:MsfViewRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MsfApi="http://com.isb.bks/msf/api" xmlns:MsfView="http://com.isb.bks/msf/view">
+  <metadata>
+    <data key="CREATION" value="0.2.20130701"/>
+    <data key="CREATION_DATE" value="20160223 114101"/>
+  </metadata>
+  <api id="contractViewContext">
+    <documentation/>
+    <imports>
+      <code>com.isb.rigel.presentation.userAnnotation.ViewMethod</code>
+    </imports>
+    <methods name="initialize" description="TODO Document Me!!" scope="private" native="true">
+      <snippets>
+        <code><![CDATA[
+]]></code>
+      </snippets>
+      <snippets type="JavaScript">
+        <code><![CDATA[
+]]></code>
+      </snippets>
+      <returnType type="void"/>
+    </methods>
+    <methods name="validateView" description="TODO Document Me!!" scope="private" native="true">
+      <snippets>
+        <code><![CDATA[
+	// A view is valid, by default, if all its children are valid
+	// You may change this behavior to make your own validation
+	return this.isValidAllChildren();
+]]></code>
+      </snippets>
+      <snippets type="JavaScript">
+        <code><![CDATA[
+	// A view is valid, by default, if all its children are valid
+	// You may change this behavior to make your own validation
+	return this.validateAllChildren();
+]]></code>
+      </snippets>
+      <returnType type="PBOOLEAN"/>
+    </methods>
+    <contextNodes xsi:type="MsfApi:MsfAttribute" name="rendered" defaultValue="true" type="PBOOLEAN" description="Indica si se renderiza la vista">
+      <tags>MAP_IN</tags>
+    </contextNodes>
+  </api>
+  <structureBundle>
+    <code><![CDATA[<view>
+	<pgs:container id="content">
+	</pgs:container>
+</view>]]></code>
+  </structureBundle>
+  <properties comment="0a2442b501-07b2-7559-4d09-9375fb63bb"/>
+  <css>
+    <cssCode>
+      <code></code>
+    </cssCode>
+  </css>
+  <instanceOf>slct.contratacionmodificacion.pgs.view.IMain</instanceOf>
+  <mapper>
+    <outMapperList>
+      <mappers id="_7pyo8doZEeWg65XYA5v_Jg"/>
+    </outMapperList>
+    <inMapperList>
+      <mappers id="_7pyo8NoZEeWg65XYA5v_Jg"/>
+    </inMapperList>
+  </mapper>
+  <datasource>
+    <inDataSourceList/>
+    <outDataSourceList/>
+  </datasource>
+  <dummy/>
+  <metaInfo docType="HTML5">
+    <entries value="%3Cmeta+http-equiv%3D%22Content-Type%22+content%3D%22application%2Fxhtml%2Bxml%3B+charset%3DUTF-8%22%2F%3E"/>
+    <entries value="%3Cmeta+http-equiv%3D%22X-UA-Compatible%22+content%3D%22IE%3DEdge%2Cchrome%3D1%22+%2F%3E"/>
+  </metaInfo>
+</MsfView:MsfViewRoot>
