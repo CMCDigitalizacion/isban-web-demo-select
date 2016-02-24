@@ -4,8 +4,8 @@
     <data key="CREATION" value="0.2.20130701"/>
     <data key="CREATION_DATE" value="20160223 161343"/>
     <data key="SAVE" value="0.2.20130701"/>
-    <data key="SAVE_DATE" value="20160224 122516"/>
-    <data key="ITERATIONS" value="118"/>
+    <data key="SAVE_DATE" value="20160224 182038"/>
+    <data key="ITERATIONS" value="120"/>
   </metadata>
   <api id="contractViewContext">
     <documentation/>
@@ -64,7 +64,6 @@
     <handlers name="hdlRender" description="Esto es una descripción" scope="private" native="true">
       <snippets type="JavaScript">
         <code><![CDATA[
-	var idCartera = this.find(this.ID.IDCARTERA);
 	$("input").attr('readonly', true);
 ]]></code>
       </snippets>

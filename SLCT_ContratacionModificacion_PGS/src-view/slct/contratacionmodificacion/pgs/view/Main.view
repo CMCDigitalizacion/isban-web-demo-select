@@ -4,8 +4,9 @@
     <data key="CREATION" value="0.2.20130701"/>
     <data key="CREATION_DATE" value="20160223 114101"/>
     <data key="SAVE" value="0.2.20130701"/>
-    <data key="SAVE_DATE" value="20160224 115718"/>
-    <data key="ITERATIONS" value="82"/>
+    <data key="SAVE_DATE" value="20160224 130939"/>
+    <data key="ITERATIONS" value="83"/>
+    <data key="EDITOR_canvasSize" value="992x5000"/>
   </metadata>
   <api id="contractViewContext">
     <documentation/>
