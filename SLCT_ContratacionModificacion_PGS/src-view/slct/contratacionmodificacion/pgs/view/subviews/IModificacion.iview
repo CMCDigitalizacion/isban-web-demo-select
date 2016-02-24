@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MsfView:MsfViewRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MsfApi="http://com.isb.bks/msf/api" xmlns:MsfView="http://com.isb.bks/msf/view">
+  <metadata>
+    <data key="CREATION" value="0.2.20130701"/>
+    <data key="CREATION_DATE" value="20160223 161343"/>
+  </metadata>
+  <trl>
+    <rules path="slct/contratacionmodificacion/pgs/view/subviews/Modificacion.view" rule="0a2442b501-07b2-7559-4d09-9375fb63bb"/>
+  </trl>
+  <api id="contractViewContext">
+    <documentation/>
+    <contextNodes xsi:type="MsfApi:MsfAttribute" name="rendered" defaultValue="true" type="PBOOLEAN" description="Indica si se renderiza la vista">
+      <tags>MAP_IN</tags>
+    </contextNodes>
+  </api>
+</MsfView:MsfViewRoot>

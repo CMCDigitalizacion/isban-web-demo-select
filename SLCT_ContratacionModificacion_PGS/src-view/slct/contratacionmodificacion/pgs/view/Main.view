@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MsfView:MsfViewRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MsfApi="http://com.isb.bks/msf/api" xmlns:MsfView="http://com.isb.bks/msf/view">
+<MsfView:MsfViewRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MsfApi="http://com.isb.bks/msf/api" xmlns:MsfView="http://com.isb.bks/msf/view" xmlns:com.isb.msf.model="http://snippet.model.msf.isb.com">
   <metadata>
     <data key="CREATION" value="0.2.20130701"/>
     <data key="CREATION_DATE" value="20160223 114101"/>
     <data key="SAVE" value="0.2.20130701"/>
-    <data key="SAVE_DATE" value="20160223 120046"/>
-    <data key="ITERATIONS" value="1"/>
+    <data key="SAVE_DATE" value="20160224 115718"/>
+    <data key="ITERATIONS" value="82"/>
   </metadata>
   <api id="contractViewContext">
     <documentation/>
     <imports>
       <code>com.isb.rigel.presentation.userAnnotation.ViewMethod</code>
+    </imports>
+    <imports xsi:type="com.isb.msf.model:MsfImportSnippet" type="JavaScriptAMD" id="jquery">
+      <code>slct/contratacionmodificacion/pgs/lib/jquery</code>
+    </imports>
+    <imports type="ReducedJava">
+      <code>com.isb.rigel.presentation.userAnnotation.ViewHandler.ValidationMode</code>
+    </imports>
+    <imports type="ReducedJava">
+      <code>com.isb.rigel.presentation.userAnnotation.ViewHandler</code>
+    </imports>
+    <imports type="ReducedJava">
+      <code>com.isb.rigel.presentation.event.BKSEvent</code>
+    </imports>
+    <imports>
+      <code>com.isb.rigel.presentation.event.BKSEvent</code>
+    </imports>
+    <imports>
+      <code>com.isb.rigel.presentation.userAnnotation.ViewHandler.ValidationMode</code>
+    </imports>
+    <imports>
+      <code>com.isb.rigel.presentation.userAnnotation.ViewHandler</code>
     </imports>
     <methods name="initialize" description="TODO Document Me!!" scope="private" native="true">
       <snippets>
@@ -46,8 +67,14 @@
   </api>
   <structureBundle>
     <code><![CDATA[<view>
-	<pgs:container id="content">
-	</pgs:container>
+	<!-- CABECERA -->
+	<header>
+		<pgs:container id="cabecera" styleClass="cabecera">
+			<pgs:outputText id="_txt_0" typetext="html" value="<b> Contratación </b> - Modificación"/>
+		</pgs:container>
+	</header>
+	
+	<slct_contratacionmodificacion_pgs_view_subviews:IModificacion id="_view_0"/>
 </view>]]></code>
   </structureBundle>
   <properties comment="0a2442b501-07b2-7559-4d09-9375fb63bb"/>
@@ -70,8 +97,9 @@
     <outDataSourceList/>
   </datasource>
   <dummy/>
-  <metaInfo docType="HTML5">
+  <metaInfo title="Contratación Modificación" docType="HTML5">
     <entries value="%3Cmeta+http-equiv%3D%22Content-Type%22+content%3D%22application%2Fxhtml%2Bxml%3B+charset%3DUTF-8%22%2F%3E"/>
     <entries value="%3Cmeta+http-equiv%3D%22X-UA-Compatible%22+content%3D%22IE%3DEdge%2Cchrome%3D1%22+%2F%3E"/>
+    <entries value="%3Cmeta+name%3D%22viewport%22+content%3D%22width%3Ddevice-width%2C+initial-scale%3D1%22%2F%3E"/>
   </metaInfo>
 </MsfView:MsfViewRoot>

@@ -13,7 +13,7 @@ body {
 }
 
 /* HEADER */
-#cabecera {
+.cabecera {
 	padding-top: 1px;
 	width: 100%;
 	height: 30px;
@@ -658,7 +658,7 @@ table.compact.dataTable thead th, table.compact.dataTable thead td {
     font-size:50px !important;
 } */
 
-#idBuscar, #idRefrescarEstado, #idRefrescarPerfil, #idBuscarEstandar, #idBuscarCarteras, #idLocCuentas,
+#idBuscar, #idRefrescarEstado, #idRefrescarPerfil, #idBuscarEstandar, .idBuscarCarteras, #idLocCuentas,
 #idLupaEstandar, #idBuscarClientes, #idInfoEstandar, #idLupaCuentaOri, #idBuscarCuentas, #idBorrarCuentaOri, #idBorrarCuentas,
 #idBuscarGestor, #idBuscarCarteraVal, #idBuscarClientesVal, #idBuscarSucursal {
 	height: 21px !important;
@@ -713,7 +713,7 @@ label{
 }
 
 span.lupa {
-	background-image: url("/select/front/img/lupa.png");
+	background-image: url("../img/lupa.png");
     background-repeat: no-repeat;
     display:block;
     width:17px; 
@@ -721,7 +721,7 @@ span.lupa {
 }
 
 span.lupaDisabled {
-	background-image: url("/select/front/img/lupaDisabled.png");
+	background-image: url("../img/lupaDisabled.png");
     background-repeat: no-repeat;
     display:block;
     width:17px; 
@@ -729,7 +729,7 @@ span.lupaDisabled {
 }
 
 span.info {
-	background-image:url("/select/front/img/info.png");
+	background-image:url("../img/info.png");
     background-repeat:no-repeat;
     display:block;
     width:17px; 
@@ -737,7 +737,7 @@ span.info {
 }
 
 span.infoDisabled {
-	background-image:url("/select/front/img/infoDisabled.png");
+	background-image:url("../img/infoDisabled.png");
     background-repeat:no-repeat;
     display:block;
     width:17px; 
@@ -745,7 +745,7 @@ span.infoDisabled {
 }
 
 span.refresh {
-	background-image:url("/select/front/img/refresh.png");
+	background-image:url("../img/refresh.png");
     background-repeat:no-repeat;
     display:block;
     width:17px; 
@@ -753,7 +753,7 @@ span.refresh {
 }
 
 span.refreshDisabled {
-	background-image:url("/select/front/img/refreshDisabled.png");
+	background-image:url("../img/refreshDisabled.png");
     background-repeat:no-repeat;
     display:block;
     width:17px; 
@@ -761,7 +761,7 @@ span.refreshDisabled {
 }
 
 span.remove {
-	background-image:url("/select/front/img/remove.png");
+	background-image:url("../img/remove.png");
     background-repeat:no-repeat;
     display:block;
     width:17px; 
@@ -769,7 +769,7 @@ span.remove {
 }
 
 span.removeDisabled {
-	background-image:url("/select/front/img/removeDisabled.png");
+	background-image:url("../img/removeDisabled.png");
     background-repeat:no-repeat;
     display:block;
     width:17px; 
@@ -794,4 +794,8 @@ span.removeDisabled {
 
 .dataTables_scrollHeadInner > table, .dataTables_scrollBody > table{
 	margin-left: -1px !important;
+}
+
+.omar {
+	color: red;
 }
