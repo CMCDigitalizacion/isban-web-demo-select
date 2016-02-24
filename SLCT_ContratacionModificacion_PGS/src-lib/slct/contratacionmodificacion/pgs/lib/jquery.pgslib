@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MsfLibrary:MsfLibraryRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:MsfLibrary="http://com.isb.bks/msf/library" id="jquery" type="AMD" path="slct/common/pgs/res/js/jquery.min">
+  <api id="contractViewContext">
+    <documentation/>
+  </api>
+</MsfLibrary:MsfLibraryRoot>

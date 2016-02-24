@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MsfView:MsfViewRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MsfApi="http://com.isb.bks/msf/api" xmlns:MsfView="http://com.isb.bks/msf/view" xmlns:com.isb.msf.model="http://snippet.model.msf.isb.com">
+  <metadata>
+    <data key="CREATION" value="0.2.20130701"/>
+    <data key="CREATION_DATE" value="20160223 161343"/>
+    <data key="SAVE" value="0.2.20130701"/>
+    <data key="SAVE_DATE" value="20160224 182038"/>
+    <data key="ITERATIONS" value="120"/>
+  </metadata>
+  <api id="contractViewContext">
+    <documentation/>
+    <imports>
+      <code>com.isb.rigel.presentation.userAnnotation.ViewMethod</code>
+    </imports>
+    <imports type="ReducedJava">
+      <code>com.isb.rigel.presentation.userAnnotation.ViewHandler</code>
+    </imports>
+    <imports type="ReducedJava">
+      <code>com.isb.rigel.presentation.userAnnotation.ViewHandler.ValidationMode</code>
+    </imports>
+    <imports type="ReducedJava">
+      <code>com.isb.rigel.presentation.event.BKSEvent</code>
+    </imports>
+    <imports>
+      <code>com.isb.rigel.presentation.userAnnotation.ViewHandler</code>
+    </imports>
+    <imports>
+      <code>com.isb.rigel.presentation.userAnnotation.ViewHandler.ValidationMode</code>
+    </imports>
+    <imports>
+      <code>com.isb.rigel.presentation.event.BKSEvent</code>
+    </imports>
+    <imports xsi:type="com.isb.msf.model:MsfImportSnippet" type="JavaScriptAMD" id="jquery">
+      <code>slct/contratacionmodificacion/pgs/lib/jquery</code>
+    </imports>
+    <methods name="initialize" description="TODO Document Me!!" scope="private" native="true">
+      <snippets>
+        <code><![CDATA[
+]]></code>
+      </snippets>
+      <snippets type="JavaScript">
+        <code><![CDATA[
+]]></code>
+      </snippets>
+      <returnType type="void"/>
+    </methods>
+    <methods name="validateView" description="TODO Document Me!!" scope="private" native="true">
+      <snippets>
+        <code><![CDATA[
+	// A view is valid, by default, if all its children are valid
+	// You may change this behavior to make your own validation
+	return this.isValidAllChildren();
+]]></code>
+      </snippets>
+      <snippets type="JavaScript">
+        <code><![CDATA[
+	// A view is valid, by default, if all its children are valid
+	// You may change this behavior to make your own validation
+	return this.validateAllChildren();
+]]></code>
+      </snippets>
+      <returnType type="PBOOLEAN"/>
+    </methods>
+    <handlers name="hdlRender" description="Esto es una descripción" scope="private" native="true">
+      <snippets type="JavaScript">
+        <code><![CDATA[
+	$("input").attr('readonly', true);
+]]></code>
+      </snippets>
+    </handlers>
+    <contextNodes xsi:type="MsfApi:MsfAttribute" name="rendered" defaultValue="true" type="PBOOLEAN" description="Indica si se renderiza la vista">
+      <tags>MAP_IN</tags>
+    </contextNodes>
+  </api>
+  <structureBundle>
+    <code><![CDATA[<view onClientRender="@handler/hdlRender">
+	<!-- FORM -->
+	<pgs:container id="_cont_0" styleClass="form-horizontal">
+		<pgs:container id="_cont_3" styleClass="container-fluid my-container">
+			<!-- ROW (DATA) -->
+			<pgs:container id="_cont_1" styleClass="row my-row">
+				<pgs:container id="_cont_2" styleClass="panel panel-default sigapanel">
+					<!-- HEADING -->
+					<pgs:container id="_cont_9" styleClass="my-panel-heading">
+						<!--<pgs:outputText id="_txt_0" typetext="html" value="<b>Modificación</b>"/>-->
+						<pgs:heading id="_hdn_0" styleClass="panel-title my-panel-title">
+							<b id="headerTitulo"> Modificación </b>
+						</pgs:heading>
+					</pgs:container>
+					<!-- DATA ROWS -->
+					<!-- 1º ROW -->
+					<pgs:container id="_cont_10" styleClass="row my-row">
+						<!-- 1º ROW -->
+						<pgs:container id="_cont_11" styleClass="col-sm-4">
+							<pgs:container id="_cont_12" styleClass="row my-row">
+								<pgs:container id="_cont_13" styleClass="col-sm-6">
+									<pgs:outputText id="lblLocCartera" styleClass="control-label pull-left" typetag="label" value="Localizador de cartera:" for="@id/idCartera" />
+								</pgs:container>
+								<pgs:container id="_cont_14" styleClass="col-sm-5">
+									<pgs:inputText id="idCartera" styleClass="form-control pull-left omar" type="text">
+									</pgs:inputText>
+								</pgs:container>
+								<pgs:container id="_cont_16" styleClass="col-sm-1">
+									<pgs:button id="idBuscarCarteras" styleClass="btn btn-icono btn-sm pull-left idBuscarCarteras" type="button" title="Buscar cartera">
+										<pgs:outputText id="_txt_1" typetag="span" styleClass="lupa" value="" />
+									</pgs:button>
+								</pgs:container>
+							</pgs:container>
+						</pgs:container>
+						<!-- 2º ROW -->
+						<pgs:container id="_cont_22" styleClass="col-sm-2 col-xs-10">
+							<pgs:outputText id="lblLocCartera_1" styleClass="control-label pull-right pull-right" typetag="label" for="@id/idCliente" value="Cliente:" />
+						</pgs:container>
+						<pgs:container id="_cont_23" styleClass="col-sm-6">
+							<pgs:inputText id="idCliente" styleClass="form-control pull-left" type="text" >
+							</pgs:inputText>
+						</pgs:container>
+					</pgs:container>
+					<!-- 2º ROW -->
+					<pgs:container id="_cont_17" styleClass="row my-row">
+						<pgs:container id="_cont_18" styleClass="col-sm-4">
+							<pgs:container id="_cont_19" styleClass="row my-row">
+								<pgs:container id="_cont_20" styleClass="col-sm-6">
+									<pgs:outputText id="lblLocCartera_0" styleClass="control-label pull-left" value="Contrato:" typetag="label" for="@id/idContrato" />
+								</pgs:container>
+								<pgs:container id="_cont_21" styleClass="col-sm-6">
+									<pgs:inputText id="idContrato" styleClass="form-control pull-left" type="text" >
+									</pgs:inputText>
+								</pgs:container>
+							</pgs:container>
+						</pgs:container>
+						<pgs:container id="_cont_24" styleClass="col-sm-2">
+							<pgs:outputText id="_txt_0" styleClass="control-label pull-right pull-right" typetag="label" for="@id/idProducto" value="Producto:" />
+						</pgs:container>
+						<pgs:container id="_cont_25" styleClass="col-sm-2">
+							<pgs:inputText id="idProducto" styleClass="form-control" type="text" >
+							</pgs:inputText>
+						</pgs:container>
+						<pgs:container id="_cont_26" styleClass="col-sm-2">
+							<pgs:outputText id="_txt_2" styleClass="control-label pull-right pull-right" typetag="label" for="@id/idNombreGestor" value="Nombre gestor:" />
+						</pgs:container>
+						<pgs:container id="_cont_27" styleClass="col-sm-2">
+							<pgs:inputText id="idNombreGestor" styleClass="form-control" type="text" >
+							</pgs:inputText>
+						</pgs:container>
+					</pgs:container>
+					<!-- 3º ROW -->
+					<pgs:container id="_cont_28" styleClass="row my-row">
+						<pgs:container id="_cont_29" styleClass="col-sm-4">
+							<pgs:container id="_cont_30" styleClass="row my-row">
+								<pgs:container id="_cont_31" styleClass="col-sm-6">
+									<pgs:outputText id="lblLocCartera_2" styleClass="control-label pull-left" value="Situación:" typetag="label" for="@id/idSituacion" />
+								</pgs:container>
+								<pgs:container id="_cont_32" styleClass="col-sm-6">
+									<pgs:inputText id="idSituacion" styleClass="form-control pull-left" type="text" >
+									</pgs:inputText>
+								</pgs:container>
+							</pgs:container>
+						</pgs:container>
+						<pgs:container id="_cont_33" styleClass="col-sm-2">
+							<pgs:outputText id="_txt_3" styleClass="control-label pull-right pull-right" typetag="label" for="@id/idDivisaRef" value="Divisa de referencia:" />
+						</pgs:container>
+						<pgs:container id="_cont_34" styleClass="col-sm-2">
+							<pgs:inputText id="idDivisaRef" styleClass="form-control" type="text" >
+							</pgs:inputText>
+						</pgs:container>
+						<pgs:container id="_cont_35" styleClass="col-sm-2">
+							<pgs:outputText id="_txt_4" styleClass="control-label pull-right pull-right" typetag="label" for="@id/idOficinaGestor" value="Oficina gestor:" />
+						</pgs:container>
+						<pgs:container id="_cont_36" styleClass="col-sm-2">
+							<pgs:inputText id="idOficinaGestor" styleClass="form-control" type="text" >
+							</pgs:inputText>
+						</pgs:container>
+					</pgs:container>
+					<!-- 4º ROW -->
+					<pgs:container id="_cont_37" styleClass="row my-row">
+						<pgs:container id="_cont_38" styleClass="col-sm-4">
+							<pgs:container id="_cont_39" styleClass="row my-row">
+								<pgs:container id="_cont_40" styleClass="col-sm-6">
+									<pgs:outputText id="lblLocCartera_3" styleClass="control-label pull-left" value="Fecha de activación:" typetag="label" for="@id/idFechaActivacion" />
+								</pgs:container>
+								<pgs:container id="_cont_41" styleClass="col-sm-6">
+									<pgs:inputText id="idFechaActivacion" styleClass="form-control pull-left" type="text" >
+									</pgs:inputText>
+								</pgs:container>
+							</pgs:container>
+						</pgs:container>
+						<pgs:container id="_cont_42" styleClass="col-sm-2">
+							<pgs:outputText id="_txt_5" styleClass="control-label pull-right pull-right" typetag="label" for="@id/idPerfilCartera" value="Perfil de cartera:" />
+						</pgs:container>
+						<pgs:container id="_cont_43" styleClass="col-sm-2">
+							<pgs:inputText id="idPerfilCartera" styleClass="form-control" type="text" >
+							</pgs:inputText>
+						</pgs:container>
+						<pgs:container id="_cont_44" styleClass="col-sm-2">
+							<pgs:outputText id="_txt_6" styleClass="control-label pull-right pull-right" typetag="label" for="@id/idTelefonoGestor" value="Teléfono gestor:" />
+						</pgs:container>
+						<pgs:container id="_cont_45" styleClass="col-sm-2">
+							<pgs:inputText id="idTelefonoGestor" styleClass="form-control" type="text" >
+							</pgs:inputText>
+						</pgs:container>
+					</pgs:container>
+					<!-- BOTOM ROW-->
+					<pgs:container id="_cont_15" styleClass="row my-row my-row-bottom">
+					</pgs:container>
+				</pgs:container>
+			</pgs:container>
+			<!-- ROW (BUTTONS) -->
+			<pgs:container id="_cont_4" styleClass="row my-row row-button">
+				<pgs:container id="_cont_5" styleClass="panel panel-default sigapanel">
+					<pgs:container id="_cont_6" styleClass="row my-row botonera">
+						<pgs:container id="_cont_7" styleClass="col-sm-12 boton">
+							<pgs:container id="_cont_8" styleClass="cajaBoton alineadoDerecha">
+								<pgs:button id="btnModificar" styleClass="btn btn-primary-rojo" title="Modificar" disabled="true"> Modificar </pgs:button>
+							</pgs:container>
+							<pgs:container id="divImprimir" styleClass="cajaBoton @style/divImprimir">
+								<pgs:button id="btnImprimir" styleClass="btn btn-primary-rojo" title="Imprimir" disabled="true"> Imprimir </pgs:button>
+							</pgs:container>
+						</pgs:container>
+					</pgs:container>
+				</pgs:container>
+			</pgs:container>
+		</pgs:container>
+	</pgs:container>
+</view>]]></code>
+  </structureBundle>
+  <properties comment="0a2442b501-07b2-7559-4d09-9375fb63bb"/>
+  <css>
+    <entities selector=".divImprimir">
+      <entries name="padding-right" value="0"/>
+    </entities>
+    <cssCode>
+      <code><![CDATA[.divImprimir {
+	padding-right: 0;
+}
+]]></code>
+    </cssCode>
+  </css>
+  <instanceOf>slct.contratacionmodificacion.pgs.view.subviews.IModificacion</instanceOf>
+  <mapper>
+    <outMapperList>
+      <mappers id="_BvYR4dpAEeWZi6weSD5yZg"/>
+    </outMapperList>
+    <inMapperList>
+      <mappers id="_BvYR4NpAEeWZi6weSD5yZg"/>
+    </inMapperList>
+  </mapper>
+  <datasource>
+    <inDataSourceList/>
+    <outDataSourceList/>
+  </datasource>
+  <dummy/>
+  <metaInfo docType="HTML5">
+    <entries value="%3Cmeta+http-equiv%3D%22Content-Type%22+content%3D%22application%2Fxhtml%2Bxml%3B+charset%3DUTF-8%22%2F%3E"/>
+    <entries value="%3Cmeta+http-equiv%3D%22X-UA-Compatible%22+content%3D%22IE%3DEdge%2Cchrome%3D1%22+%2F%3E"/>
+  </metaInfo>
+</MsfView:MsfViewRoot>

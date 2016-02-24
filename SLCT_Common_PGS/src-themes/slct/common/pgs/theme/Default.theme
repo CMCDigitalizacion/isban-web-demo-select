@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="ASCII"?>
 <com.isb.msf.model:MsfThemeRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.isb.msf.model="http://theme.model.msf.isb.com" id="Default" scope="protected">
   <entries path="slct/common/pgs/theme/Default.css"/>
+  <entries path="slct/common/pgs/res/css/bootstrap.css"/>
+  <entries path="slct/common/pgs/res/css/bootstrap-theme.min.css"/>
+  <entries path="slct/common/pgs/res/css/jquery.dataTables1.10.7.css"/>
+  <entries path="slct/common/pgs/res/css/dataTables.bootstrap.css"/>
+  <entries path="slct/common/pgs/res/css/dataTables.responsive.css"/>
+  <entries path="slct/common/pgs/res/css/bootstrap-select.css"/>
+  <entries path="slct/common/pgs/res/css/formValidation.css"/>
+  <entries path="slct/common/pgs/res/css/siga.css"/>
+  <entries path="slct/common/pgs/res/css/select2-bootstrap.css"/>
+  <entries path="slct/common/pgs/res/css/select2.css"/>
   <cssCode code=""/>
 </com.isb.msf.model:MsfThemeRoot>
