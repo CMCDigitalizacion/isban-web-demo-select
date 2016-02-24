@@ -4,8 +4,8 @@
     <data key="CREATION" value="0.2.20130701"/>
     <data key="CREATION_DATE" value="20160223 161343"/>
     <data key="SAVE" value="0.2.20130701"/>
-    <data key="SAVE_DATE" value="20160224 121240"/>
-    <data key="ITERATIONS" value="117"/>
+    <data key="SAVE_DATE" value="20160224 122516"/>
+    <data key="ITERATIONS" value="118"/>
   </metadata>
   <api id="contractViewContext">
     <documentation/>
@@ -103,7 +103,7 @@
 								</pgs:container>
 								<pgs:container id="_cont_16" styleClass="col-sm-1">
 									<pgs:button id="idBuscarCarteras" styleClass="btn btn-icono btn-sm pull-left idBuscarCarteras" type="button" title="Buscar cartera">
-										<pgs:outputText id="_txt_1" typetag="span" styleClass="lupa" />
+										<pgs:outputText id="_txt_1" typetag="span" styleClass="lupa" value="" />
 									</pgs:button>
 								</pgs:container>
 							</pgs:container>
