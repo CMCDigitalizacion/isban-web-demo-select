@@ -8,6 +8,7 @@
     <rules path="slct/contratacionmodificacion/pgs/view/subviews/modals/LocalizacionCarteras.view" rule="0a2442b501-07b2-7559-4d09-9375fb63bb"/>
   </trl>
   <api id="contractViewContext">
+    <events name="CANCELAR" description="Se lanza cuando se pulsa sobre el boton cancelar"/>
     <documentation/>
     <contextNodes xsi:type="MsfApi:MsfAttribute" name="rendered" defaultValue="true" type="PBOOLEAN" description="Indica si se renderiza la vista">
       <tags>MAP_IN</tags>

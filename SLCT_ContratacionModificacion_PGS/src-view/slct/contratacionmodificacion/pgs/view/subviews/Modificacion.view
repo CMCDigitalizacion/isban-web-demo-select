@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MsfView:MsfViewRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MsfApi="http://com.isb.bks/msf/api" xmlns:MsfView="http://com.isb.bks/msf/view" xmlns:com.isb.msf.model="http://snippet.model.msf.isb.com">
+<MsfView:MsfViewRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:MsfApi="http://com.isb.bks/msf/api" xmlns:MsfView="http://com.isb.bks/msf/view">
   <metadata>
     <data key="CREATION" value="0.2.20130701"/>
     <data key="CREATION_DATE" value="20160223 161343"/>
     <data key="SAVE" value="0.2.20130701"/>
-    <data key="SAVE_DATE" value="20160224 182038"/>
-    <data key="ITERATIONS" value="120"/>
+    <data key="SAVE_DATE" value="20160225 185816"/>
+    <data key="ITERATIONS" value="150"/>
   </metadata>
   <api id="contractViewContext">
     <documentation/>
@@ -29,9 +29,6 @@
     </imports>
     <imports>
       <code>com.isb.rigel.presentation.event.BKSEvent</code>
-    </imports>
-    <imports xsi:type="com.isb.msf.model:MsfImportSnippet" type="JavaScriptAMD" id="jquery">
-      <code>slct/contratacionmodificacion/pgs/lib/jquery</code>
     </imports>
     <methods name="initialize" description="TODO Document Me!!" scope="private" native="true">
       <snippets>
@@ -68,12 +65,25 @@
 ]]></code>
       </snippets>
     </handlers>
+    <handlers name="cancelarLocalizacionCarteras" description="Esto es una descripción" scope="private" native="true">
+      <snippets type="JavaScript">
+        <code><![CDATA[
+	this.find(this.ID.IDCARTERA).setValue("Has cancelado :D");
+]]></code>
+      </snippets>
+    </handlers>
     <contextNodes xsi:type="MsfApi:MsfAttribute" name="rendered" defaultValue="true" type="PBOOLEAN" description="Indica si se renderiza la vista">
       <tags>MAP_IN</tags>
     </contextNodes>
   </api>
   <structureBundle>
     <code><![CDATA[<view onClientRender="@handler/hdlRender">
+	<!-- MODAL -->
+	<pgs:container id="_cont_46" styleClass="@style/modal">
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+			<slct_contratacionmodificacion_pgs_view_subviews_modals:ILocalizacionCarteras id="_view_0" CANCELAR="@handler/cancelarLocalizacionCarteras"/>
+		</div>
+	</pgs:container>
 	<!-- FORM -->
 	<pgs:container id="_cont_0" styleClass="form-horizontal">
 		<pgs:container id="_cont_3" styleClass="container-fluid my-container">
@@ -97,11 +107,11 @@
 									<pgs:outputText id="lblLocCartera" styleClass="control-label pull-left" typetag="label" value="Localizador de cartera:" for="@id/idCartera" />
 								</pgs:container>
 								<pgs:container id="_cont_14" styleClass="col-sm-5">
-									<pgs:inputText id="idCartera" styleClass="form-control pull-left omar" type="text">
+									<pgs:inputText id="idCartera" styleClass="form-control pull-left" type="text">
 									</pgs:inputText>
 								</pgs:container>
 								<pgs:container id="_cont_16" styleClass="col-sm-1">
-									<pgs:button id="idBuscarCarteras" styleClass="btn btn-icono btn-sm pull-left idBuscarCarteras" type="button" title="Buscar cartera">
+									<pgs:button id="idBuscarCarteras" styleClass="btn btn-icono btn-sm pull-left idBuscarCarteras" type="button" title="Buscar cartera" data-toggle="modal" data-target="#myModal">
 										<pgs:outputText id="_txt_1" typetag="span" styleClass="lupa" value="" />
 									</pgs:button>
 								</pgs:container>
@@ -112,7 +122,7 @@
 							<pgs:outputText id="lblLocCartera_1" styleClass="control-label pull-right pull-right" typetag="label" for="@id/idCliente" value="Cliente:" />
 						</pgs:container>
 						<pgs:container id="_cont_23" styleClass="col-sm-6">
-							<pgs:inputText id="idCliente" styleClass="form-control pull-left" type="text" >
+							<pgs:inputText id="idCliente" styleClass="form-control pull-left" type="text">
 							</pgs:inputText>
 						</pgs:container>
 					</pgs:container>
@@ -124,7 +134,7 @@
 									<pgs:outputText id="lblLocCartera_0" styleClass="control-label pull-left" value="Contrato:" typetag="label" for="@id/idContrato" />
 								</pgs:container>
 								<pgs:container id="_cont_21" styleClass="col-sm-6">
-									<pgs:inputText id="idContrato" styleClass="form-control pull-left" type="text" >
+									<pgs:inputText id="idContrato" styleClass="form-control pull-left" type="text">
 									</pgs:inputText>
 								</pgs:container>
 							</pgs:container>
@@ -133,14 +143,14 @@
 							<pgs:outputText id="_txt_0" styleClass="control-label pull-right pull-right" typetag="label" for="@id/idProducto" value="Producto:" />
 						</pgs:container>
 						<pgs:container id="_cont_25" styleClass="col-sm-2">
-							<pgs:inputText id="idProducto" styleClass="form-control" type="text" >
+							<pgs:inputText id="idProducto" styleClass="form-control" type="text">
 							</pgs:inputText>
 						</pgs:container>
 						<pgs:container id="_cont_26" styleClass="col-sm-2">
 							<pgs:outputText id="_txt_2" styleClass="control-label pull-right pull-right" typetag="label" for="@id/idNombreGestor" value="Nombre gestor:" />
 						</pgs:container>
 						<pgs:container id="_cont_27" styleClass="col-sm-2">
-							<pgs:inputText id="idNombreGestor" styleClass="form-control" type="text" >
+							<pgs:inputText id="idNombreGestor" styleClass="form-control" type="text">
 							</pgs:inputText>
 						</pgs:container>
 					</pgs:container>
@@ -152,7 +162,7 @@
 									<pgs:outputText id="lblLocCartera_2" styleClass="control-label pull-left" value="Situación:" typetag="label" for="@id/idSituacion" />
 								</pgs:container>
 								<pgs:container id="_cont_32" styleClass="col-sm-6">
-									<pgs:inputText id="idSituacion" styleClass="form-control pull-left" type="text" >
+									<pgs:inputText id="idSituacion" styleClass="form-control pull-left" type="text">
 									</pgs:inputText>
 								</pgs:container>
 							</pgs:container>
@@ -161,14 +171,14 @@
 							<pgs:outputText id="_txt_3" styleClass="control-label pull-right pull-right" typetag="label" for="@id/idDivisaRef" value="Divisa de referencia:" />
 						</pgs:container>
 						<pgs:container id="_cont_34" styleClass="col-sm-2">
-							<pgs:inputText id="idDivisaRef" styleClass="form-control" type="text" >
+							<pgs:inputText id="idDivisaRef" styleClass="form-control" type="text">
 							</pgs:inputText>
 						</pgs:container>
 						<pgs:container id="_cont_35" styleClass="col-sm-2">
 							<pgs:outputText id="_txt_4" styleClass="control-label pull-right pull-right" typetag="label" for="@id/idOficinaGestor" value="Oficina gestor:" />
 						</pgs:container>
 						<pgs:container id="_cont_36" styleClass="col-sm-2">
-							<pgs:inputText id="idOficinaGestor" styleClass="form-control" type="text" >
+							<pgs:inputText id="idOficinaGestor" styleClass="form-control" type="text">
 							</pgs:inputText>
 						</pgs:container>
 					</pgs:container>
@@ -180,7 +190,7 @@
 									<pgs:outputText id="lblLocCartera_3" styleClass="control-label pull-left" value="Fecha de activación:" typetag="label" for="@id/idFechaActivacion" />
 								</pgs:container>
 								<pgs:container id="_cont_41" styleClass="col-sm-6">
-									<pgs:inputText id="idFechaActivacion" styleClass="form-control pull-left" type="text" >
+									<pgs:inputText id="idFechaActivacion" styleClass="form-control pull-left" type="text">
 									</pgs:inputText>
 								</pgs:container>
 							</pgs:container>
@@ -189,14 +199,14 @@
 							<pgs:outputText id="_txt_5" styleClass="control-label pull-right pull-right" typetag="label" for="@id/idPerfilCartera" value="Perfil de cartera:" />
 						</pgs:container>
 						<pgs:container id="_cont_43" styleClass="col-sm-2">
-							<pgs:inputText id="idPerfilCartera" styleClass="form-control" type="text" >
+							<pgs:inputText id="idPerfilCartera" styleClass="form-control" type="text">
 							</pgs:inputText>
 						</pgs:container>
 						<pgs:container id="_cont_44" styleClass="col-sm-2">
 							<pgs:outputText id="_txt_6" styleClass="control-label pull-right pull-right" typetag="label" for="@id/idTelefonoGestor" value="Teléfono gestor:" />
 						</pgs:container>
 						<pgs:container id="_cont_45" styleClass="col-sm-2">
-							<pgs:inputText id="idTelefonoGestor" styleClass="form-control" type="text" >
+							<pgs:inputText id="idTelefonoGestor" styleClass="form-control" type="text">
 							</pgs:inputText>
 						</pgs:container>
 					</pgs:container>
@@ -229,11 +239,34 @@
     <entities selector=".divImprimir">
       <entries name="padding-right" value="0"/>
     </entities>
+    <entities selector=".modal_content">
+      <entries name="background-color" value="#F2F2F2"/>
+    </entities>
+    <entities selector=".fluid_container">
+      <entries name="float" value="yes"/>
+      <entries name="margin" value="0 auto"/>
+    </entities>
+    <entities selector=".modal">
+      <entries name="display" value="block"/>
+      <entries name="padding-left" value="17px"/>
+    </entities>
     <cssCode>
       <code><![CDATA[.divImprimir {
 	padding-right: 0;
 }
-]]></code>
+.modal_content {
+	background-color: #F2F2F2;
+}
+
+.fluid_container {
+	float: yes;
+	margin: 0 auto;
+}
+
+.modal {
+	display: block;
+	padding-left: 17px;
+}]]></code>
     </cssCode>
   </css>
   <instanceOf>slct.contratacionmodificacion.pgs.view.subviews.IModificacion</instanceOf>

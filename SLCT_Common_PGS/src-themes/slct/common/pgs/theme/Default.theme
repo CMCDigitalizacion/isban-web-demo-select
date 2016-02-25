@@ -11,5 +11,7 @@
   <entries path="slct/common/pgs/res/css/siga.css"/>
   <entries path="slct/common/pgs/res/css/select2-bootstrap.css"/>
   <entries path="slct/common/pgs/res/css/select2.css"/>
+  <entries path="slct/common/pgs/res/js/jquery.min.js"/>
+  <entries path="slct/common/pgs/res/js/bootstrap.js"/>
   <cssCode code=""/>
 </com.isb.msf.model:MsfThemeRoot>
