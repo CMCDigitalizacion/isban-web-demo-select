@@ -4,8 +4,8 @@
     <data key="CREATION" value="0.2.20130701"/>
     <data key="CREATION_DATE" value="20160223 161343"/>
     <data key="SAVE" value="0.2.20130701"/>
-    <data key="SAVE_DATE" value="20160225 185816"/>
-    <data key="ITERATIONS" value="150"/>
+    <data key="SAVE_DATE" value="20160226 102125"/>
+    <data key="ITERATIONS" value="153"/>
   </metadata>
   <api id="contractViewContext">
     <documentation/>
@@ -79,11 +79,7 @@
   <structureBundle>
     <code><![CDATA[<view onClientRender="@handler/hdlRender">
 	<!-- MODAL -->
-	<pgs:container id="_cont_46" styleClass="@style/modal">
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-			<slct_contratacionmodificacion_pgs_view_subviews_modals:ILocalizacionCarteras id="_view_0" CANCELAR="@handler/cancelarLocalizacionCarteras"/>
-		</div>
-	</pgs:container>
+	<slct_contratacionmodificacion_pgs_view_subviews_modals:ILocalizacionCarteras id="_view_0" CANCELAR="@handler/cancelarLocalizacionCarteras" />
 	<!-- FORM -->
 	<pgs:container id="_cont_0" styleClass="form-horizontal">
 		<pgs:container id="_cont_3" styleClass="container-fluid my-container">
@@ -246,10 +242,6 @@
       <entries name="float" value="yes"/>
       <entries name="margin" value="0 auto"/>
     </entities>
-    <entities selector=".modal">
-      <entries name="display" value="block"/>
-      <entries name="padding-left" value="17px"/>
-    </entities>
     <cssCode>
       <code><![CDATA[.divImprimir {
 	padding-right: 0;
@@ -261,11 +253,6 @@
 .fluid_container {
 	float: yes;
 	margin: 0 auto;
-}
-
-.modal {
-	display: block;
-	padding-left: 17px;
 }]]></code>
     </cssCode>
   </css>

@@ -4,8 +4,8 @@
     <data key="CREATION" value="0.2.20130701"/>
     <data key="CREATION_DATE" value="20160224 151213"/>
     <data key="SAVE" value="0.2.20130701"/>
-    <data key="SAVE_DATE" value="20160225 185701"/>
-    <data key="ITERATIONS" value="60"/>
+    <data key="SAVE_DATE" value="20160226 102047"/>
+    <data key="ITERATIONS" value="63"/>
   </metadata>
   <api id="contractViewContext">
     <events name="CANCELAR" description="Se lanza cuando se pulsa sobre el boton cancelar"/>
@@ -54,32 +54,36 @@
   </api>
   <structureBundle>
     <code><![CDATA[<view>
-	<div class="modal-dialog modal-lg" role="document">
-		<pgs:container id="_cont_0" styleClass="modal-content @style/modal_content">
-			<!-- HEADER -->
-			<pgs:container id="_cont_2" styleClass="modal-header cabecera-subtitulo cabecera"> Localización de carteras </pgs:container>
-			<!-- BODY -->
-			<pgs:container id="_cont_3" styleClass="modal-body">
-				<pgs:container id="_cont_7" styleClass="container-fluid my-container">
-					<!-- 1º PANEL -->
-					<pgs:container id="divLocalizadorPers" styleClass="panel panel-default sigapanel panelLocalizador">
+	<pgs:container id="_cont_46" styleClass="@style/modal">
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal-lg" role="document">
+				<pgs:container id="_cont_0" styleClass="modal-content @style/modal_content">
+					<!-- HEADER -->
+					<pgs:container id="_cont_2" styleClass="modal-header cabecera-subtitulo cabecera"> Localización de carteras </pgs:container>
+					<!-- BODY -->
+					<pgs:container id="_cont_3" styleClass="modal-body">
+						<pgs:container id="_cont_7" styleClass="container-fluid my-container">
+							<!-- 1º PANEL -->
+							<pgs:container id="divLocalizadorPers" styleClass="panel panel-default sigapanel panelLocalizador">
+							</pgs:container>
+							<!-- 2º PANEL -->
+							<pgs:container id="divLocalizadorPers_0" styleClass="panel panel-default sigapanel">
+							</pgs:container>
+						</pgs:container>
 					</pgs:container>
-					<!-- 2º PANEL -->
-					<pgs:container id="divLocalizadorPers_0" styleClass="panel panel-default sigapanel">
+					<!-- FOOTER -->
+					<pgs:container id="_cont_4" styleClass="modal-footer">
+						<pgs:container id="_cont_5" styleClass="row my-row">
+							<pgs:container id="_cont_6" styleClass="col-sm-12 boton">
+								<pgs:button id="_btn_0" styleClass="btn btn-primary-rojo" title="Cancelar" data-dismiss="modal" onClientClick="@handler/hdlCancelar"> Cancelar </pgs:button>
+								<pgs:button id="idSelCartera" styleClass="btn btn-primary-rojo" title="Seleccionar" disabled="true"> Seleccionar </pgs:button>
+							</pgs:container>
+						</pgs:container>
 					</pgs:container>
 				</pgs:container>
-			</pgs:container>
-			<!-- FOOTER -->
-			<pgs:container id="_cont_4" styleClass="modal-footer">
-				<pgs:container id="_cont_5" styleClass="row my-row">
-					<pgs:container id="_cont_6" styleClass="col-sm-12 boton">
-						<pgs:button id="_btn_0" styleClass="btn btn-primary-rojo" title="Cancelar" data-dismiss="modal" onClientClick="@handler/hdlCancelar"> Cancelar </pgs:button>
-						<pgs:button id="idSelCartera" styleClass="btn btn-primary-rojo" title="Seleccionar" disabled="true"> Seleccionar </pgs:button>
-					</pgs:container>
-				</pgs:container>
-			</pgs:container>
-		</pgs:container>
-	</div>
+			</div>
+		</div>
+	</pgs:container>
 </view>]]></code>
   </structureBundle>
   <properties comment="0a2442b501-07b2-7559-4d09-9375fb63bb"/>
@@ -91,6 +95,10 @@
       <entries name="float" value="yes"/>
       <entries name="margin" value="0 auto"/>
     </entities>
+    <entities selector=".modal">
+      <entries name="display" value="block"/>
+      <entries name="padding-left" value="17px"/>
+    </entities>
     <cssCode>
       <code><![CDATA[.modal_content {
 	background-color: #F2F2F2;
@@ -99,6 +107,11 @@
 .fluid_container {
 	float: yes;
 	margin: 0 auto;
+}
+
+.modal {
+	display: block;
+	padding-left: 17px;
 }]]></code>
     </cssCode>
   </css>
